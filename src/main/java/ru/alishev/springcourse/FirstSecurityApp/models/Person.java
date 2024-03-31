@@ -28,6 +28,17 @@ public class Person {
     @Column(name = "password")
     private String password;
 
+    public String getRole() {
+        return role;
+    }
+
+    @Column(name = "role")
+    private String role;
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
     // Конструктор по умолчанию нужен для Spring
     public Person() {
     }
@@ -76,6 +87,7 @@ public class Person {
                 ", username='" + username + '\'' +
                 ", yearOfBirth=" + yearOfBirth +
                 ", password='" + password + '\'' +
+                ", role='" + role + '\'' +
                 '}';
     }
 }
